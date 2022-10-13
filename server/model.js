@@ -5,17 +5,17 @@ const pool = new Pool({
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
   port: process.env.DB_PORT,
-});
+})
 
 const getTable = () => {
     return new Promise( function(res, rej) {
         pool.query('SELECT * FROM test_table', (error, results) => {
             if (error) {
-                rej(error);
+                rej(error)
             }
-            res(results.rows);
-        });
-    });
+            res(results.rows)
+        })
+    })
 }
 
 module.exports = {

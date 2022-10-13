@@ -47,8 +47,8 @@ function App() {
     setCurrentPageNumber(1)
   }, [isLoaded, setTotalRows, data.length, totalRows])
 
-  var pages = []
-  for (var i = 1; i < totalPages; i++) {
+  const pages = []
+  for (let i = 1; i < totalPages; i++) {
     pages.push(i)
   }
 
