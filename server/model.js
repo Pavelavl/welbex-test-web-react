@@ -8,7 +8,7 @@ const pool = new Pool({
 })
 
 const getTable = () => {
-    return new Promise( function(res, rej) {
+    return new Promise((res, rej) => {
         pool.query('SELECT * FROM test_table', (error, results) => {
             if (error) {
                 rej(error)
